@@ -14,6 +14,11 @@
 		B602119024AE4EAA00683703 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B602118E24AE4EAA00683703 /* Main.storyboard */; };
 		B602119C24AE4EAA00683703 /* ZerojetWebTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B602119B24AE4EAA00683703 /* ZerojetWebTests.swift */; };
 		B60211A724AE4EAA00683703 /* ZerojetWebUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60211A624AE4EAA00683703 /* ZerojetWebUITests.swift */; };
+		B60211B624AEB9BD00683703 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60211B524AEB9BD00683703 /* WelcomeView.swift */; };
+		B60211B824AEBB4B00683703 /* MembershipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60211B724AEBB4B00683703 /* MembershipView.swift */; };
+		B60211BA24AEBC1C00683703 /* DicoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60211B924AEBC1C00683703 /* DicoverView.swift */; };
+		B60211BC24AEBC3B00683703 /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60211BB24AEBC3B00683703 /* LearnView.swift */; };
+		B60211BE24AEBC5E00683703 /* BusinessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60211BD24AEBC5E00683703 /* BusinessView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,11 @@
 		B60211A224AE4EAA00683703 /* ZerojetWebUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZerojetWebUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60211A624AE4EAA00683703 /* ZerojetWebUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZerojetWebUITests.swift; sourceTree = "<group>"; };
 		B60211A824AE4EAA00683703 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B60211B524AEB9BD00683703 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		B60211B724AEBB4B00683703 /* MembershipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipView.swift; sourceTree = "<group>"; };
+		B60211B924AEBC1C00683703 /* DicoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DicoverView.swift; sourceTree = "<group>"; };
+		B60211BB24AEBC3B00683703 /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
+		B60211BD24AEBC5E00683703 /* BusinessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +108,7 @@
 		B602118424AE4EA900683703 /* ZerojetWeb */ = {
 			isa = PBXGroup;
 			children = (
+				B60211B424AEB99500683703 /* AllViews */,
 				B602118524AE4EA900683703 /* AppDelegate.swift */,
 				B602118724AE4EA900683703 /* ContentView.swift */,
 				B602118924AE4EA900683703 /* Assets.xcassets */,
@@ -133,6 +144,18 @@
 				B60211A824AE4EAA00683703 /* Info.plist */,
 			);
 			path = ZerojetWebUITests;
+			sourceTree = "<group>";
+		};
+		B60211B424AEB99500683703 /* AllViews */ = {
+			isa = PBXGroup;
+			children = (
+				B60211B524AEB9BD00683703 /* WelcomeView.swift */,
+				B60211B724AEBB4B00683703 /* MembershipView.swift */,
+				B60211B924AEBC1C00683703 /* DicoverView.swift */,
+				B60211BB24AEBC3B00683703 /* LearnView.swift */,
+				B60211BD24AEBC5E00683703 /* BusinessView.swift */,
+			);
+			path = AllViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +289,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B60211BE24AEBC5E00683703 /* BusinessView.swift in Sources */,
 				B602118824AE4EA900683703 /* ContentView.swift in Sources */,
+				B60211BC24AEBC3B00683703 /* LearnView.swift in Sources */,
+				B60211B624AEB9BD00683703 /* WelcomeView.swift in Sources */,
+				B60211B824AEBB4B00683703 /* MembershipView.swift in Sources */,
+				B60211BA24AEBC1C00683703 /* DicoverView.swift in Sources */,
 				B602118624AE4EA900683703 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
