@@ -26,8 +26,7 @@ struct MembershipView: View {
                           .cornerRadius(15)
                           
                           CanvasViews_Membership()
-                          .background(backgroundColor)
-                          .cornerRadius(15)
+                          
                               
                           
                       }

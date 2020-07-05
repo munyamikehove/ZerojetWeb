@@ -25,8 +25,7 @@ struct DicoverView: View {
                 .cornerRadius(15)
                 
                 CanvasViews_Discover()
-                .background(backgroundColor)
-                .cornerRadius(15)
+                
                     
                 
             }

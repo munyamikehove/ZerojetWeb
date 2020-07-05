@@ -25,8 +25,7 @@ struct LearnView: View {
                 .cornerRadius(15)
                 
                 CanvasViews_Learn()
-                .background(backgroundColor)
-                .cornerRadius(15)
+                
                     
                 
             }
