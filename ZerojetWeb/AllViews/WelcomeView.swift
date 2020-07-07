@@ -324,7 +324,7 @@ struct CanvasViews_Welcome  : View {
                         
                         Spacer().frame(height: 10)
                         
-                        Text("Billions of dollars are wasted on ads each year.\nAds are boring and annoying.")
+                        Text("The high cost of flying keeps many of us from travelling to see the world.")
                             .foregroundColor(Color(red: 0.31, green: 0.31, blue: 0.31))
                             .font(.system(size: 20))
                             .fontWeight(.regular)
@@ -386,7 +386,7 @@ struct CanvasViews_Welcome  : View {
                         
                         Spacer().frame(height: 10)
                         
-                        Text("Zerojet members get free flights to a destination using money that was meant for ads.")
+                        Text("With Zerojet, restaurants and other businesses you spend with at your destination pay for your flight.")
                             .foregroundColor(Color(red: 0.31, green: 0.31, blue: 0.31))
                             .font(.system(size: 20))
                             .fontWeight(.regular)
@@ -409,7 +409,7 @@ struct CanvasViews_Welcome  : View {
                         
                         VStack(spacing: 0){
                             HStack{
-                                Text("The Rewards")
+                                Text("The Reward")
                                     .foregroundColor(purpleCardColor)
                                     .font(.custom("Menlo Regular",size: 22.5))
                                     .fontWeight(.semibold)

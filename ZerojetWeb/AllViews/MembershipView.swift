@@ -229,13 +229,20 @@ struct NavigationViews_Membership : View {
     }
 }
 
-
 //CanvasView
-struct CanvasViews_Membership : View {
+struct CanvasViews_Membership  : View {
+    
+    @State var blueHighLightColor: Color = Color(red: 0.19, green: 0.19, blue: 0.79)
+    
+    @State var noFocusButtonColor: Color = Color(red: 0.92, green: 0.95, blue: 0.98)
+    
+    @State var orangeCardColor: Color = Color(red: 1.00, green: 0.95, blue: 0.95)
     
     @State var purpleCardColor: Color = Color(red: 0.35, green: 0.30, blue: 0.73)
-    @State var strokeColor: Color = Color(red: 0.45, green: 0.58, blue: 0.61)
-    @State var backgroundColor: Color = Color(red: 0.96, green: 0.96, blue: 0.96)
+    
+    @State var backgroundColor: Color = Color(red: 0.92, green: 0.95, blue: 0.98)
+    
+    @State var blueCardColor: Color = Color(red: 0.60, green: 0.82, blue: 1.00)
     
     
     var body: some View {
@@ -245,7 +252,6 @@ struct CanvasViews_Membership : View {
             
             VStack{
                 
-                Spacer().frame(height: 15)
                 
                 VStack(spacing: 0){
                     
@@ -262,151 +268,214 @@ struct CanvasViews_Membership : View {
                     
                 }
                 
-                Spacer()
+                Spacer().frame(height: 25)
                 
                 HStack{
                     
-                    Spacer()
+                    Spacer().frame(width: 55)
                     
-                    HStack(spacing:0){
+                    
+                    
+                    VStack{
                         
-                        VStack(spacing:0){
-                            
+                        VStack(spacing: 0){
                             HStack{
                                 Text("Zerojet Membership")
                                     .foregroundColor(purpleCardColor)
                                     .font(.custom("Menlo Regular",size: 22.5))
                                     .fontWeight(.semibold)
-                                
+                                Spacer()
                             }
-                            .padding(EdgeInsets(top: 20, leading: 5, bottom: 10, trailing: 0))
+                            .padding(EdgeInsets(top: 20, leading: 25, bottom: 10, trailing: 0))
+                            
+                            
                             
                             HStack{
                                 
                                 Divider()
-                                    .frame(width: 300, height: 5)
+                                    .frame(width: 250, height: 5)
                                     .background(LinearGradient(gradient: Gradient(colors: [purpleCardColor, .purple ]), startPoint: .leading, endPoint: .trailing))
                                     .cornerRadius(2)
-                                
+                                Spacer()
                             }
-                            .padding(EdgeInsets(top: 0, leading: 35, bottom: 0, trailing: 0))
+                            .padding(EdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 0))
                             
-                            
-                            Image("price")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 280.0, height: 300.0)
-                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 3, trailing: 0))
-                                .clipShape(Circle())
-                                .shadow(color: .gray, radius: 5, x: 1, y: 1)
-                                .overlay(Circle().stroke(Color.gray, lineWidth: 1))
-                                .padding(EdgeInsets(top: 40, leading: 0, bottom: 0, trailing: 0))
-                            
-                            
-                            Spacer()
                             
                         }
                         
                         
                         
                         
-                        VStack{
-                            
-                            HStack{
-                                
-                                Text("For $9.99 CAD per month, you get:")
-                                    .foregroundColor(Color.black)
-                                    .font(.custom("Menlo Regular",size: 20))
-                                    .fontWeight(.semibold)
-                                    .padding(EdgeInsets(top: 120, leading: 20, bottom: 0, trailing: 20))
-                                
-                                Spacer()
-                            }
-                            
-                            
-                            HStack{
-                                Spacer().frame(width:25)
-                                
-                                Text("Free flights")
-                                    .foregroundColor(Color.black)
-                                    .font(.system(size: 20))
-                                    .fontWeight(.regular)
-                                    .padding(EdgeInsets(top: 25, leading: 0, bottom: 0, trailing: 20))
-                                
-                                Spacer()
-                            }
-                            
-                            HStack{
-                                
-                                Spacer().frame(width:25)
-                                
-                                Text("Free inter-city train and bus rides")
-                                    .foregroundColor(Color.black)
-                                    .font(.system(size: 20))
-                                    .fontWeight(.regular)
-                                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 20))
-                                
-                                Spacer()
-                            }
-                            
-                            HStack{
-                                
-                                Spacer().frame(width:25)
-                                
-                                Text("Destinations in Canada,the Caribbean, Mexico, and the USA")
-                                    .foregroundColor(Color.black)
-                                    .font(.system(size: 20))
-                                    .fontWeight(.regular)
-                                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 20))
-                                Spacer()
-                            }
-                            
-                            
-                            HStack{
-                                
-                                Spacer().frame(width:25)
-                                
-                                Text("Member exclusive events and activities at your destination")
-                                    .foregroundColor(Color.black)
-                                    .font(.system(size: 20))
-                                    .fontWeight(.regular)
-                                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 20))
-                                Spacer()
-                            }
-                            
-                            
-                            
-                            
-                            
-                            
-                            Spacer()
-                        }
+                        
+                        
+                        Image("price")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 250.0, height: 300.0)
+                            .padding(EdgeInsets(top: 0, leading: 0, bottom: 3, trailing: 0))
+                            .clipShape(Circle())
+                            .shadow(color: .gray, radius: 5, x: 1, y: 1)
+                            .overlay(Circle().stroke(Color.gray, lineWidth: 1))
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        Spacer().frame(height: 10)
+                        
+                        Text("Free flights to destinations in Canada,the Caribbean, Mexico, and the USA")
+                            .foregroundColor(Color(red: 0.31, green: 0.31, blue: 0.31))
+                            .font(.system(size: 20))
+                            .fontWeight(.regular)
+                            .padding(EdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 25))
+                        
+                        Spacer()
                         
                         
                         
                     }
-                    .frame(minWidth: 0, maxWidth: 705, minHeight: 0, maxHeight: 450)
+                    .frame(minWidth: 0, maxWidth: 320, minHeight: 0, maxHeight: 500)
                     .background(Color.white)
                     .cornerRadius(25)
                     .shadow(color: .gray, radius: 5, x: 2, y: 2)
                     .border(Color.gray, width: 0.2)
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
                     
+                    Spacer().frame(width: 25)
+                    
+                    
+                    VStack{
+                        
+                        VStack(spacing: 0){
+                            HStack{
+                                Text("Create Account")
+                                    .foregroundColor(purpleCardColor)
+                                    .font(.custom("Menlo Regular",size: 22.5))
+                                    .fontWeight(.semibold)
+                                Spacer()
+                            }
+                            .padding(EdgeInsets(top: 20, leading: 25, bottom: 10, trailing: 0))
+                            
+                            
+                            
+                            HStack{
+                                
+                                Divider()
+                                    .frame(width: 250, height: 5)
+                                    .background(LinearGradient(gradient: Gradient(colors: [purpleCardColor, .purple ]), startPoint: .leading, endPoint: .trailing))
+                                    .cornerRadius(2)
+                                Spacer()
+                            }
+                            .padding(EdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 0))
+                            
+                            
+                        }
+                        
+                        HStack{
+                            
+                            
+                            VStack(spacing: 0){
+                                HStack{
+                                    Text("Your Information")
+                                        .foregroundColor(Color.gray)
+                                        .font(.custom("Menlo Regular",size: 17.5))
+                                        .fontWeight(.thin)
+                                    
+                                    
+                                    Spacer()
+                                }.padding(EdgeInsets(top: 0, leading: 25, bottom: 12, trailing: 0))
+                                UserInfoForm()
+                            }.padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
+                            
+                            
+                            
+                            Divider()
+                                .frame(width: 0.5, height: 250)
+                                .background(Color.black)
+                                .cornerRadius(2)
+                            
+                            
+                            VStack(spacing: 0){
+                                HStack{
+                                    Text("Order Summary")
+                                        .foregroundColor(Color.gray)
+                                        .font(.custom("Menlo Regular",size: 17.5))
+                                        .fontWeight(.thin)
+                                    
+                                    
+                                    Spacer()
+                                }.padding(EdgeInsets(top: 0, leading: 25, bottom: 10, trailing: 0))
+                                PaymentInfo()
+                            }.padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
+                            
+                        }
+                        
+                        HStack{
+                              Text("By clicking Purchase, you agree to our Terms and Conditions.")
+                                            .foregroundColor(.black)
+                                            .font(.custom("Menlo Regular",size: 16))
+                                            .fontWeight(.regular)
+                                            .multilineTextAlignment(.center)
+                                            .padding(EdgeInsets(top: 20, leading: 25, bottom: 10, trailing: 25))
+                            
+                            
+                                        Spacer()
+                            
+                                        VStack{
+                            
+                                            Text("Purchase")
+                                                .font(.custom("Gill Sans Light",size: 30))
+                                                .fontWeight(.semibold)
+                                                .frame(minWidth: 0, maxWidth: 300, minHeight: 0, maxHeight: 50)
+                                                .foregroundColor(Color.white)
+                                                .background(purpleCardColor)
+                                                .cornerRadius(15)
+                                                .shadow(color: .gray, radius: 5, x: 2, y: 2)
+                                                .border(Color.gray, width: 0.2)
+                                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20))
+                            }
+                        }
+                        
+                       // Spacer()
+                        
+                    }
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 500)
+                    .background(Color.white)
+                    .cornerRadius(25)
+                    .shadow(color: .gray, radius: 5, x: 2, y: 2)
+                    .border(Color.gray, width: 0.2)
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
                     
                     Spacer()
                 }
                 
-                VStack{
+                Spacer()
+                
+                HStack{
+                    
+                    Spacer().frame(width: 55)
                     
                     HStack{
                         
+                        Image("attention")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(minWidth: 0, maxWidth: 180, minHeight: 0, maxHeight: 200)
+                            .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 0))
+                        
+                        Spacer()
+                        
                         VStack(spacing: 0){
                             HStack{
-                                Text("Before you join")
+                                Text("Already a member ?")
                                     .foregroundColor(purpleCardColor)
                                     .font(.custom("Menlo Regular",size: 19.5))
                                     .fontWeight(.semibold)
-                                
                                 
                                 Spacer()
                                 
@@ -418,197 +487,59 @@ struct CanvasViews_Membership : View {
                             HStack{
                                 
                                 Divider()
-                                    .frame(width: 200, height: 5)
+                                    .frame(width:220, height: 5)
                                     .background(LinearGradient(gradient: Gradient(colors: [purpleCardColor, .purple ]), startPoint: .leading, endPoint: .trailing))
                                     .cornerRadius(2)
                                 Spacer()
                             }
-                            .padding(EdgeInsets(top: 0, leading: 25, bottom: 10, trailing: 0))
-                            
-                            
+                            .padding(EdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 0))
                             
                             HStack{
-                                
-                                Text("Before booking your free flight, we will show you how much you must spend with Zerojet partners at your destination.")
-                                    .foregroundColor(Color.black)
-                                    .font(.system(size: 18))
+                                Text("If you already have a zerojet membership, download our iOS or Android mobile application to book your free flight.")
+                                    .foregroundColor(Color(red: 0.31, green: 0.31, blue: 0.31))
+                                    .font(.system(size: 20))
                                     .fontWeight(.regular)
-                                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 20))
-                                    .fixedSize(horizontal: false, vertical: true)
+                                    .padding(EdgeInsets(top: 10, leading: 25, bottom: 0, trailing: 25))
                                 
                                 Spacer()
-                                
-                            }.padding(EdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 0))
-                            
-                            
-                            
-                            
-                            
-                        }
-                        
-                        VStack{
-                            Image("attention")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 200.0, height: 180.0)
-                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                            //                        .background(Color.white)
-                            //                        .cornerRadius(25)
-                            //                        .shadow(color: .gray, radius: 5, x: 2, y: 2)
-                            //                        .border(Color.gray, width: 0.2)
-                            //                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 10))
-                            
+                            }
+                          
                             Spacer()
                         }
                         
+                        Image("android")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(minWidth: 0, maxWidth: 180, minHeight: 0, maxHeight: 50)
+                        .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 10))
                         
-                    }
+                        Image("apple")
+                                                   .resizable()
+                                                   .aspectRatio(contentMode: .fill)
+                            .frame(minWidth: 0, maxWidth: 180, minHeight: 0, maxHeight: 56.5)
+                                                   .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 20))
+
+                        
+                    }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 180)
+                        .background(Color.white)
+                        .cornerRadius(25)
+                        .shadow(color: .gray, radius: 5, x: 2, y: 2)
+                        .border(Color.gray, width: 0.2)
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
                     
-                    VStack(spacing:0){
-                        
-                        Spacer().frame(height: 10)
-                        
-                        Text("View Zerojet Partners")
-                            .foregroundColor(Color.black)
-                            .font(.custom("Menlo Regular",size: 16.5))
-                            .fontWeight(.semibold)
-                        
-                        Spacer().frame(height: 5)
-                        
-                        HStack(spacing: 0){
-                            
-                            Spacer()
-                            
-                            VStack(spacing: 0){
-                                
-                                
-                                Image("shop")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 40.0, height: 40.0)
-                                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 3, trailing: 0))
-                                    .clipShape(Circle())
-                                    .shadow(color: .gray, radius: 5, x: 1, y: 1)
-                                    .overlay(Circle().stroke(Color.red, lineWidth: 0.1))
-                                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
-                                
-                                Text("Shopping")
-                                    .foregroundColor(Color.black)
-                                    .font(.system(size: 18))
-                                    .fontWeight(.regular)
-                            }
-                            
-                            Spacer()
-                            
-                            VStack(spacing: 0){
-                                
-                                
-                                Image("stay")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 40.0, height: 40.0)
-                                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 3, trailing: 0))
-                                    .clipShape(Circle())
-                                    .shadow(color: .gray, radius: 5, x: 1, y: 1)
-                                    .overlay(Circle().stroke(Color.red, lineWidth: 0.1))
-                                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
-                                
-                                Text("Accommodation")
-                                    .foregroundColor(Color.black)
-                                    .font(.system(size: 18))
-                                    .fontWeight(.regular)
-                            }
-                            
-                            Spacer()
-                            
-                            VStack(spacing: 0){
-                                
-                                
-                                Image("eat")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 40.0, height: 40.0)
-                                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 3, trailing: 0))
-                                    .clipShape(Circle())
-                                    .shadow(color: .gray, radius: 5, x: 1, y: 1)
-                                    .overlay(Circle().stroke(Color.red, lineWidth: 0.1))
-                                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
-                                
-                                Text("Retaurants")
-                                    .foregroundColor(Color.black)
-                                    .font(.system(size: 18))
-                                    .fontWeight(.regular)
-                            }
-                            
-                            Spacer()
-                            
-                            VStack(spacing: 0){
-                                
-                                
-                                Image("do")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 40.0, height: 40.0)
-                                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 3, trailing: 0))
-                                    .clipShape(Circle())
-                                    .shadow(color: .gray, radius: 5, x: 1, y: 1)
-                                    .overlay(Circle().stroke(Color.red, lineWidth: 0.1))
-                                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
-                                
-                                Text("Activities")
-                                    .foregroundColor(Color.black)
-                                    .font(.system(size: 18))
-                                    .fontWeight(.regular)
-                            }
-                            
-                            Spacer()
-                            
-                        }.padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0))
-                    }
+                    
+                    
+                    
+                    Spacer().frame(width: 5)
+                    
+                    
                     
                 }
-                .frame(minWidth: 0, maxWidth: 705, minHeight: 0, maxHeight: 300)
-                .background(Color.white)
-                .cornerRadius(25)
-                .shadow(color: .gray, radius: 5, x: 2, y: 2)
-                .border(Color.gray, width: 0.2)
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
-                
-                Spacer()
-                
-            }
-            
-            Spacer().frame(width: 5)
-            
-            VStack(spacing: 0){
-                
-                
-                
-                UserInfoForm()
-                
-                Spacer().frame(height: 20)
-                
-                OrderSummary()
-                
-                
-                
-                PaymentButton()
-                
-                
                 
                 
             }
-            .frame(minWidth: 0, maxWidth: 380, minHeight: 0, maxHeight: .infinity)
-            .background(Color.white)
-            .cornerRadius(25)
-            .shadow(color: .gray, radius: 5, x: 2, y: 2)
-            .border(Color.gray, width: 0.2)
-            .padding(EdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 25))
+            .padding(EdgeInsets(top: 25, leading: 0, bottom: 5, trailing: 25))
             
-            
-            
-            
-            Spacer().frame(width: 15)
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -618,6 +549,7 @@ struct CanvasViews_Membership : View {
     
 }
 
+//UserInfo
 struct UserInfoForm : View{
     
     @State var purpleCardColor: Color = Color(red: 0.35, green: 0.30, blue: 0.73)
@@ -629,29 +561,6 @@ struct UserInfoForm : View{
     var body: some View{
         
         VStack(spacing: 0){
-            
-            HStack{
-                Text("Create Account")
-                    .foregroundColor(purpleCardColor)
-                    .font(.custom("Menlo Regular",size: 19.5))
-                    .fontWeight(.semibold)
-                
-                
-                Spacer()
-                
-            }
-            .padding(EdgeInsets(top: 20, leading: 25, bottom: 5, trailing: 0))
-            
-            HStack{
-                
-                Divider()
-                    .frame(width: 200, height: 5)
-                    .background(LinearGradient(gradient: Gradient(colors: [purpleCardColor, .purple ]), startPoint: .leading, endPoint: .trailing))
-                    .cornerRadius(2)
-                Spacer()
-            }
-            .padding(EdgeInsets(top: 0, leading: 25, bottom: 30, trailing: 0))
-            
             
             HStack{
                 
@@ -775,6 +684,7 @@ struct UserInfoForm : View{
                         .fontWeight(.light)
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50, alignment: .leading)
                         .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
+                        .fixedSize(horizontal: true, vertical: false)
                     
                     Image("down")
                         .resizable()
@@ -794,80 +704,289 @@ struct UserInfoForm : View{
     }
 }
 
+//PaymentInfo
+struct PaymentInfo : View{
+    
+    @State var purpleCardColor: Color = Color(red: 0.35, green: 0.30, blue: 0.73)
+    @State private var firstName: String = ""
+    @State private var lastName: String = ""
+    @State private var email: String = ""
+    @State private var birthday = Date()
+    
+    var body: some View{
+        
+        VStack(spacing: 0){
+            
+            VStack{
+                
+                
+                HStack{
+                    
+                    VStack{
+                        Image("logomoto")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 55.0, height: 55.0)
+                            
+                        Spacer().frame(height: 56)
+                        
+                    }
+                    
+                    
+                    Spacer()
+                    
+                    VStack{
+                        Text("Zerojet Membership")
+                            .foregroundColor(.black)
+                            .font(.system(size: 18))
+                            .fontWeight(.regular)
+                        
+                        
+                        VStack{
+                            
+                            HStack{
+                                
+                                Text("One Year")
+                                    .foregroundColor(.black)
+                                    .font(.system(size: 16))
+                                    .fontWeight(.regular)
+                                    .fixedSize(horizontal: true, vertical: false)
+                                
+                                Spacer().frame(width: 20)
+                                
+                                
+                                Text("$9.99 X 12")
+                                    .foregroundColor(.gray)
+                                    .font(.system(size: 16))
+                                    .fontWeight(.regular)
+                                    .fixedSize(horizontal: true, vertical: false)
+                                
+                            }
+                            
+                            HStack{
+                                Text("HST")
+                                    .foregroundColor(.black)
+                                    .font(.system(size: 16))
+                                    .fontWeight(.regular)
+                                
+                                Spacer()
+                            }.padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 0))
+                            
+                            HStack{
+                                Text("Total Due")
+                                    .foregroundColor(.black)
+                                    .font(.system(size: 20))
+                                    .fontWeight(.regular)
+                                
+                                Spacer()
+                            }.padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 0))
+                            
+                        }                               .padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 0))
+                        
+                        
+                    }
+                    
+                    Spacer().frame(width: 35)
+                    
+                    VStack(spacing: 0){
+                        
+                        Text("119.88")
+                            .foregroundColor(.black)
+                            .font(.custom("Menlo Regular",size: 18))
+                            .fontWeight(.semibold)
+                        
+                        Spacer().frame(height: 10)
+                        
+                        Text("15.59")
+                            .foregroundColor(.black)
+                            .font(.custom("Menlo Regular",size: 18))
+                            .fontWeight(.semibold)
+                        
+                         Spacer().frame(height: 12)
+                        
+                        Divider()
+                        .frame(width: 60, height: 1)
+                        .background(Color.black)
+                        .cornerRadius(2)
+                        
+                        Text("135.47")
+                            .foregroundColor(.black)
+                            .font(.custom("Menlo Regular",size: 18))
+                            .fontWeight(.semibold)
+                        
+                        Divider()
+                                              .frame(width: 60, height: 2)
+                                              .background(Color.black)
+                                              .cornerRadius(2)
+                        
+                    }
+                    
+                    
+                    Spacer()
+                    
+                }
+                
+                
+                
+            }
+            .overlay(
+                RoundedRectangle(cornerRadius: 15.0)
+                    .stroke(Color.white,lineWidth: 0.0)
+                    .shadow(color: .white, radius: 0.5)
+            )
+                .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
+            
+            
+            HStack{
+                                               Text("Card Details")
+                                                   .foregroundColor(Color.gray)
+                                                   .font(.custom("Menlo Regular",size: 17.5))
+                                                   .fontWeight(.thin)
+                                               
+                                               
+                                               Spacer()
+                                           }.padding(EdgeInsets(top: 0, leading: 25, bottom: 7, trailing: 0))
+            
+            
+            
+            //Birthdate
+            HStack{
+                
+                
+                Text("Card Number")
+                    .foregroundColor(Color.gray)
+                    .font(.system(size: 20))
+                    .fontWeight(.light)
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50, alignment: .leading)
+                    .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+            }
+            .overlay(
+                RoundedRectangle(cornerRadius: 15.0)
+                    .stroke(Color.black,lineWidth: 0.5)
+                    .shadow(color: .white, radius: 0.5)
+            )
+                .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
+            
+           
+            
+            HStack{
+                
+                HStack{
+                    
+                    
+                    
+                    Text("CVV")
+                        .foregroundColor(Color.gray)
+                        .font(.system(size: 18))
+                        .fontWeight(.light)
+                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50, alignment: .center)
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    
+                    
+                   
+                }
+                .overlay(
+                    RoundedRectangle(cornerRadius: 15.0)
+                        .stroke(Color.black,lineWidth: 0.5)
+                        .shadow(color: .white, radius: 0.5)
+                )
+                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 10))
+                
+                HStack{
+                    
+                    Spacer()
+                    
+                    Text("MM/YY")
+                        .foregroundColor(Color.gray)
+                        .font(.system(size: 20))
+                        .fontWeight(.light)
+                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50, alignment: .center)
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    
+                 Spacer()
+                }
+                .overlay(
+                    RoundedRectangle(cornerRadius: 15.0)
+                        .stroke(Color.black,lineWidth: 0.5)
+                        .shadow(color: .white, radius: 0.5)
+                )
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 10))
+                
+                HStack{
+                    
+                    
+                    Text("Postal Code")
+                        .foregroundColor(Color.gray)
+                        .font(.system(size: 18))
+                        .fontWeight(.light)
+                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50, alignment: .center)
+                        .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+                        .fixedSize(horizontal: true, vertical: false)
+                    
+                  
+                    
+                }
+                .overlay(
+                    RoundedRectangle(cornerRadius: 15.0)
+                        .stroke(Color.black,lineWidth: 0.5)
+                        .shadow(color: .white, radius: 0.5)
+                )
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 20))
+            }
+        }
+    }
+}
+
+//CanvasContainerViewOne
+struct  CanvasContainerViewOne_Membership  : View {
+    
+    @State var backgroundColor: Color = Color(red: 0.92, green: 0.95, blue: 0.98)
+    
+    var body: some View {
+        HStack{
+            
+            
+            
+            VStack{
+                Text("")
+            }
+            .frame(maxWidth: 100, maxHeight: .infinity)
+            .background(backgroundColor)
+            
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        
+        
+    }
+    
+}
+
+//CanvasContainerViewTwo
+struct  CanvasContainerViewTwo_Membership : View {
+    
+    var body: some View {
+        VStack{
+            
+            Text("")
+                .foregroundColor(Color.black)
+            
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        
+        
+    }
+    
+}
+
+//OrderSummary
 struct OrderSummary : View{
     
     var body: some View{
         
         VStack(spacing: 0){
             
-            HStack{
-                Text("Order Summary")
-                    .foregroundColor(.black)
-                    .font(.custom("Menlo Regular",size: 17))
-                    .fontWeight(.regular)
-                
-                
-                Spacer()
-                
-            }
-            .padding(EdgeInsets(top: 20, leading: 25, bottom: 5, trailing: 0))
             
-            HStack{
-                
-                Divider()
-                    .frame(width: 200, height: 2)
-                    .background(Color.black)
-                    .cornerRadius(2)
-                Spacer()
-            }
-            .padding(EdgeInsets(top: 0, leading: 25, bottom: 10, trailing: 0))
             
-            HStack{
-                
-                Image("logomoto")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 65.0, height: 65.0)
-                    .padding(EdgeInsets(top: 0, leading: 22, bottom: 3, trailing: 0))
-                
-                VStack{
-                    Text("Zerojet Membership")
-                        .foregroundColor(.black)
-                        .font(.custom("Menlo Regular",size: 16))
-                        .fontWeight(.regular)
-                    
-                    
-                    
-                    HStack{
-                        
-                        Text("One Year")
-                            .foregroundColor(.black)
-                            .font(.system(size: 16))
-                            .fontWeight(.regular)
-                        
-                        Spacer().frame(width: 20)
-                        
-                        
-                        Text("$9.99 X 12")
-                            .foregroundColor(.gray)
-                            .font(.system(size: 16))
-                            .fontWeight(.regular)
-                        
-                    }.padding(EdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 0))
-                    
-                    
-                }
-                
-                Spacer()
-                
-                Text("119.88")
-                    .foregroundColor(.black)
-                    .font(.custom("Menlo Regular",size: 18))
-                    .fontWeight(.semibold)
-                
-                Spacer()
-                
-            }
             
             HStack{
                 Spacer().frame(width: 100)
@@ -879,52 +998,7 @@ struct OrderSummary : View{
             }
             .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
             
-            HStack{
-                
-                Image("")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 65.0, height: 65.0)
-                    .padding(EdgeInsets(top: 0, leading: 22, bottom: 3, trailing: 5))
-                
-                VStack{
-                    
-                    HStack{
-                        Text("HST")
-                            .foregroundColor(.black)
-                            .font(.custom("Menlo Regular",size: 16))
-                            .fontWeight(.regular)
-                        Spacer()
-                    }
-                    
-                    HStack{
-                        Text("$119.88 X 0.13")
-                            .foregroundColor(.gray)
-                            .font(.custom("Menlo Regular",size: 16))
-                            .fontWeight(.regular)
-                            .padding(EdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 0))
-                        Spacer()
-                    }
-                    
-                    
-                    
-                    
-                }
-                
-                //Spacer()
-                
-                
-                Text("15.59")
-                    .foregroundColor(.black)
-                    .font(.custom("Menlo Regular",size: 18))
-                    .fontWeight(.semibold)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 15))
-                
-                Spacer()
-                
-                
-                
-            }
+            
             
             HStack{
                 Spacer().frame(width: 100)
@@ -961,99 +1035,6 @@ struct OrderSummary : View{
             
             
         }
-        
-    }
-    
-}
-
-struct PaymentButton : View{
-    
-    @State var purpleCardColor: Color = Color(red: 0.35, green: 0.30, blue: 0.73)
-    
-    var body: some View{
-        VStack{
-           
-            
-           
-                
-                
-                
-                
-            
-            
-        
-            
-            Text("By clicking Purchase, you agree to our Terms and Conditions.")
-                .foregroundColor(.black)
-                .font(.custom("Menlo Regular",size: 16))
-                .fontWeight(.regular)
-                .multilineTextAlignment(.center)
-                .padding(EdgeInsets(top: 80, leading: 25, bottom: 10, trailing: 25))
-            
-            
-            Spacer()
-            
-            VStack{
-                
-                Text("Purchase")
-                    .font(.custom("Gill Sans Light",size: 35))
-                    .fontWeight(.semibold)
-                    .frame(minWidth: 0, maxWidth: 300, minHeight: 0, maxHeight: 80)
-                    .foregroundColor(Color.white)
-                    .background(purpleCardColor)
-                    .cornerRadius(15)
-                    .shadow(color: .gray, radius: 5, x: 2, y: 2)
-                    .border(Color.gray, width: 0.2)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                
-                Spacer()
-                
-            }.frame(minWidth: 0, maxWidth: 320, minHeight: 0, maxHeight: 180)
-                //.background(Color.white)
-                //.cornerRadius(25)
-                .shadow(color: .gray, radius: 5, x: 2, y: 2)
-                .border(Color.gray, width: 0.2)
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 50, trailing: 0))
-        }
-    }
-}
-
-//CanvasContainerViewOne
-struct  CanvasContainerViewOne_Membership : View {
-    
-    @State var backgroundColor: Color = Color(red: 0.92, green: 0.95, blue: 0.98)
-    
-    var body: some View {
-        HStack{
-            
-            Spacer()
-            
-            VStack{
-                Text("")
-            }
-            .frame(maxWidth: 100, maxHeight: .infinity)
-            .background(backgroundColor)
-            
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        
-        
-    }
-    
-}
-
-//CanvasContainerViewTwo
-struct  CanvasContainerViewTwo_Membership : View {
-    
-    var body: some View {
-        VStack{
-            
-            Text("")
-                .foregroundColor(Color.black)
-            
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        
         
     }
     
