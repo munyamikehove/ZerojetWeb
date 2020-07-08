@@ -515,6 +515,7 @@ struct CanvasViews_Welcome  : View {
                                     .fontWeight(.regular)
                                     .padding(EdgeInsets(top: 10, leading: 25, bottom: 0, trailing: 25))
                                 
+                                
                                 Spacer()
                             }
                             
