@@ -433,10 +433,21 @@ struct CanvasViews_Membership  : View {
                                 .cornerRadius(2)
                                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
                             
-                            Text("Due to the Covid-19 pandemic, all memberships bought in 2020 will be valid till December 2022")
-                                .foregroundColor(.black)
-                                .font(.system(size: 17))
-                                .fontWeight(.regular)
+                            HStack{
+                                
+                                Image("correct")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(minWidth: 0, maxWidth: 30, minHeight: 0, maxHeight: 30)
+                                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 5))
+                                
+                                Text("Due to the Covid-19 pandemic, all memberships bought in 2020 will be valid till December 2022")
+                                    .foregroundColor(.black)
+                                    .font(.system(size: 17))
+                                    .fontWeight(.regular)
+                            }
+                            
+                           
                             
                             
                             Divider()
