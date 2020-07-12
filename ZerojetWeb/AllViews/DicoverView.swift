@@ -308,7 +308,7 @@ struct CanvasViews_Discover : View {
                         .foregroundColor(Color(red: 0.31, green: 0.31, blue: 0.31))
                         .font(.system(size: 20))
                         .fontWeight(.regular)
-                        .padding(EdgeInsets(top: 15, leading: 20, bottom: 0, trailing: 20))
+                        .padding(EdgeInsets(top: 1, leading: 20, bottom: 0, trailing: 20))
                     
                 }
                 

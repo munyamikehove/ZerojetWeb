@@ -259,13 +259,13 @@ struct CanvasViews_Welcome  : View {
                 
                 VStack(spacing: 0){
                     
-                    Text("Welcome to ZeroJet")
+                    Text("Free flights to exciting destinations 🛫")
                         .foregroundColor(Color.black)
                         .font(.custom("Gill Sans Light", size: 45))
                         .fontWeight(.semibold)
                     //.padding(EdgeInsets(top: 25, leading: 20, bottom: 0, trailing: 0))
                     
-                    Text("The free travel company 🛫")
+                    Text("Welcome to ZeroJet")
                         .foregroundColor(Color.gray)
                         .font(.custom("Noteworthy Light", size: 25))
                         .fontWeight(.ultraLight)
@@ -409,7 +409,7 @@ struct CanvasViews_Welcome  : View {
                         
                         VStack(spacing: 0){
                             HStack{
-                                Text("The Reward")
+                                Text("The Benefits")
                                     .foregroundColor(purpleCardColor)
                                     .font(.custom("Menlo Regular",size: 22.5))
                                     .fontWeight(.semibold)
@@ -630,4 +630,3 @@ struct WelcomeView_Previews: PreviewProvider {
 }
 
 
-//.background(LinearGradient(gradient: Gradient(colors: [Color(red: 0.99, green: 0.47, blue: 0.00), .purple ]), startPoint: .leading, endPoint: .trailing))

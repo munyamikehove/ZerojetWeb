@@ -97,12 +97,12 @@ struct NavigationViews_Membership : View {
                     
                     
                 }
-                    //                   .overlay(
-                    //                       RoundedRectangle(cornerRadius: 15.0)
-                    //                           .stroke(buttonBackgroundColor,lineWidth: 0.5)
-                    //                           .shadow(color: buttonBackgroundColor, radius: 0.5)
-                    //                   )
-                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
+                //                   .overlay(
+                //                       RoundedRectangle(cornerRadius: 15.0)
+                //                           .stroke(buttonBackgroundColor,lineWidth: 0.5)
+                //                           .shadow(color: buttonBackgroundColor, radius: 0.5)
+                //                   )
+                .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
                 
                 
                 HStack{
@@ -128,7 +128,7 @@ struct NavigationViews_Membership : View {
                         .stroke(buttonBackgroundColor,lineWidth: 0.5)
                         .shadow(color: buttonBackgroundColor, radius: 0.5)
                 )
-                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
+                .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
                 
                 
                 HStack{
@@ -148,12 +148,12 @@ struct NavigationViews_Membership : View {
                         .frame(width: 80.0, height: 50.0, alignment: .leading)
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10))
                 }
-                    //                .overlay(
-                    //                    RoundedRectangle(cornerRadius: 15.0)
-                    //                        .stroke(buttonBackgroundColor,lineWidth: 0.5)
-                    //                        .shadow(color: buttonBackgroundColor, radius: 0.5)
-                    //                )
-                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
+                //                .overlay(
+                //                    RoundedRectangle(cornerRadius: 15.0)
+                //                        .stroke(buttonBackgroundColor,lineWidth: 0.5)
+                //                        .shadow(color: buttonBackgroundColor, radius: 0.5)
+                //                )
+                .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
                 
                 
                 HStack{
@@ -172,12 +172,12 @@ struct NavigationViews_Membership : View {
                         .frame(width: 80.0, height: 50.0, alignment: .leading)
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10))
                 }
-                    //                .overlay(
-                    //                    RoundedRectangle(cornerRadius: 15.0)
-                    //                        .stroke(buttonBackgroundColor,lineWidth: 0.5)
-                    //                        .shadow(color: buttonBackgroundColor, radius: 0.5)
-                    //                )
-                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
+                //                .overlay(
+                //                    RoundedRectangle(cornerRadius: 15.0)
+                //                        .stroke(buttonBackgroundColor,lineWidth: 0.5)
+                //                        .shadow(color: buttonBackgroundColor, radius: 0.5)
+                //                )
+                .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
                 
                 
                 HStack{
@@ -197,12 +197,12 @@ struct NavigationViews_Membership : View {
                         .frame(width: 80.0, height: 50.0, alignment: .leading)
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10))
                 }
-                    //                .overlay(
-                    //                    RoundedRectangle(cornerRadius: 15.0)
-                    //                        .stroke(buttonBackgroundColor,lineWidth: 0.5)
-                    //                        .shadow(color: buttonBackgroundColor, radius: 0.5)
-                    //                )
-                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
+                //                .overlay(
+                //                    RoundedRectangle(cornerRadius: 15.0)
+                //                        .stroke(buttonBackgroundColor,lineWidth: 0.5)
+                //                        .shadow(color: buttonBackgroundColor, radius: 0.5)
+                //                )
+                .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
                 
                 
             }
@@ -255,13 +255,13 @@ struct CanvasViews_Membership  : View {
                 
                 VStack(spacing: 0){
                     
-                    Text("Join ZeroJet")
+                    Text("One account for all your travel needs")
                         .foregroundColor(Color.black)
                         .font(.custom("Gill Sans Light", size: 45))
                         .fontWeight(.semibold)
                     //.padding(EdgeInsets(top: 25, leading: 20, bottom: 0, trailing: 0))
                     
-                    Text("One account for all your travel needs")
+                    Text("Join Zerojet")
                         .foregroundColor(Color.gray)
                         .font(.custom("Noteworthy Light", size: 25))
                         .fontWeight(.ultraLight)
@@ -327,19 +327,26 @@ struct CanvasViews_Membership  : View {
                         
                         
                         Spacer().frame(height: 10)
+                    
                         
-                        Text("Free flights to destinations in Canada,the Caribbean, Mexico, and the USA")
+                        Text("Free flights to destinations in Canada,the Caribbean, Mexico, and the USA.")
+                            .font(.system(size: 19))
                             .foregroundColor(Color(red: 0.31, green: 0.31, blue: 0.31))
-                            .font(.system(size: 20))
                             .fontWeight(.regular)
-                            .padding(EdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 25))
+                            .padding(EdgeInsets(top: 5, leading: 25, bottom: 0, trailing: 25))
+                        
+                        Text("Member exclusive perks at destinations.")
+                            .foregroundColor(Color(red: 0.31, green: 0.31, blue: 0.31))
+                            .font(.system(size: 19))
+                            .fontWeight(.regular)
+                            .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 35))
                         
                         Spacer()
                         
                         
                         
                     }
-                    .frame(minWidth: 0, maxWidth: 320, minHeight: 0, maxHeight: 500)
+                    .frame(minWidth: 0, maxWidth: 320, minHeight: 0, maxHeight: 530)
                     .background(Color.white)
                     .cornerRadius(25)
                     .shadow(color: .gray, radius: 5, x: 2, y: 2)
@@ -357,7 +364,9 @@ struct CanvasViews_Membership  : View {
                                     .foregroundColor(purpleCardColor)
                                     .font(.custom("Menlo Regular",size: 22.5))
                                     .fontWeight(.semibold)
+                                
                                 Spacer()
+                                
                             }
                             .padding(EdgeInsets(top: 20, leading: 25, bottom: 10, trailing: 0))
                             
@@ -415,36 +424,63 @@ struct CanvasViews_Membership  : View {
                             
                         }
                         
-                        HStack{
-                              Text("By clicking Purchase, you agree to our Terms and Conditions.")
-                                            .foregroundColor(.black)
-                                            .font(.custom("Menlo Regular",size: 16))
-                                            .fontWeight(.regular)
-                                            .multilineTextAlignment(.center)
-                                            .padding(EdgeInsets(top: 20, leading: 25, bottom: 10, trailing: 25))
+                        
+                        VStack(spacing: 0){
+                            
+                            Divider()
+                                .frame(width: 750, height: 0.5)
+                                .background(Color.black)
+                                .cornerRadius(2)
+                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 5, trailing: 0))
+                            
+                            Text("Due to the Covid-19 pandemic, all memberships bought in 2020 will be valid till December 2022")
+                                .foregroundColor(.black)
+                                .font(.system(size: 17))
+                                .fontWeight(.regular)
                             
                             
-                                        Spacer()
+                            Divider()
+                                .frame(width: 750, height: 0.5)
+                                .background(Color.black)
+                                .cornerRadius(2)
+                                .padding(EdgeInsets(top: 5, leading: 0, bottom: 10, trailing: 0))
                             
-                                        VStack{
-                            
-                                            Text("Purchase")
-                                                .font(.custom("Gill Sans Light",size: 30))
-                                                .fontWeight(.semibold)
-                                                .frame(minWidth: 0, maxWidth: 300, minHeight: 0, maxHeight: 50)
-                                                .foregroundColor(Color.white)
-                                                .background(purpleCardColor)
-                                                .cornerRadius(15)
-                                                .shadow(color: .gray, radius: 5, x: 2, y: 2)
-                                                .border(Color.gray, width: 0.2)
-                                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20))
-                            }
                         }
                         
-                       // Spacer()
+                        
+                        HStack{
+                            Text("By clicking Purchase, you agree to our Terms and Conditions.")
+                                .foregroundColor(.black)
+                                .font(.custom("Menlo Regular",size: 16))
+                                .fontWeight(.regular)
+                                .multilineTextAlignment(.leading)
+                                .frame(minWidth: 0, maxWidth: 380, minHeight: 0, maxHeight: 50)
+                                .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
+                            
+                            
+                            Spacer()
+                            
+                            
+                            
+                            Text("Purchase")
+                                .font(.custom("Gill Sans Light",size: 30))
+                                .fontWeight(.semibold)
+                                .frame(minWidth: 0, maxWidth: 300, minHeight: 0, maxHeight: 50)
+                                .foregroundColor(Color.white)
+                                .background(purpleCardColor)
+                                .cornerRadius(15)
+                                .shadow(color: .gray, radius: 5, x: 2, y: 2)
+                                .border(Color.gray, width: 0.2)
+                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20))
+                            
+                            
+                        }
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
+                        
+                        // Spacer()
                         
                     }
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 500)
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 530)
                     .background(Color.white)
                     .cornerRadius(25)
                     .shadow(color: .gray, radius: 5, x: 2, y: 2)
@@ -503,29 +539,29 @@ struct CanvasViews_Membership  : View {
                                 
                                 Spacer()
                             }
-                          
+                            
                             Spacer()
                         }
                         
                         Image("android")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(minWidth: 0, maxWidth: 180, minHeight: 0, maxHeight: 50)
-                        .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 10))
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(minWidth: 0, maxWidth: 180, minHeight: 0, maxHeight: 50)
+                            .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 10))
                         
                         Image("apple")
-                                                   .resizable()
-                                                   .aspectRatio(contentMode: .fill)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
                             .frame(minWidth: 0, maxWidth: 180, minHeight: 0, maxHeight: 56.5)
-                                                   .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 20))
-
+                            .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 20))
+                        
                         
                     }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 180)
-                        .background(Color.white)
-                        .cornerRadius(25)
-                        .shadow(color: .gray, radius: 5, x: 2, y: 2)
-                        .border(Color.gray, width: 0.2)
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
+                    .background(Color.white)
+                    .cornerRadius(25)
+                    .shadow(color: .gray, radius: 5, x: 2, y: 2)
+                    .border(Color.gray, width: 0.2)
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
                     
                     
                     
@@ -579,7 +615,7 @@ struct UserInfoForm : View{
                     .stroke(Color.black,lineWidth: 0.5)
                     .shadow(color: .white, radius: 0.5)
             )
-                .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
+            .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
             
             
             HStack{
@@ -597,7 +633,7 @@ struct UserInfoForm : View{
                     .stroke(Color.black,lineWidth: 0.5)
                     .shadow(color: .white, radius: 0.5)
             )
-                .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
+            .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
             
             //Birthdate
             HStack{
@@ -615,7 +651,7 @@ struct UserInfoForm : View{
                     .stroke(Color.black,lineWidth: 0.5)
                     .shadow(color: .white, radius: 0.5)
             )
-                .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
+            .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
             
             HStack{
                 Text("Birthday")
@@ -650,7 +686,7 @@ struct UserInfoForm : View{
                         .stroke(Color.black,lineWidth: 0.5)
                         .shadow(color: .white, radius: 0.5)
                 )
-                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 0))
+                .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 0))
                 
                 HStack{
                     
@@ -673,7 +709,7 @@ struct UserInfoForm : View{
                         .stroke(Color.black,lineWidth: 0.5)
                         .shadow(color: .white, radius: 0.5)
                 )
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
                 
                 HStack{
                     
@@ -698,7 +734,7 @@ struct UserInfoForm : View{
                         .stroke(Color.black,lineWidth: 0.5)
                         .shadow(color: .white, radius: 0.5)
                 )
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 20))
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 20))
             }
         }
     }
@@ -727,7 +763,7 @@ struct PaymentInfo : View{
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 55.0, height: 55.0)
-                            
+                        
                         Spacer().frame(height: 56)
                         
                     }
@@ -802,12 +838,12 @@ struct PaymentInfo : View{
                             .font(.custom("Menlo Regular",size: 18))
                             .fontWeight(.semibold)
                         
-                         Spacer().frame(height: 12)
+                        Spacer().frame(height: 12)
                         
                         Divider()
-                        .frame(width: 60, height: 1)
-                        .background(Color.black)
-                        .cornerRadius(2)
+                            .frame(width: 60, height: 1)
+                            .background(Color.black)
+                            .cornerRadius(2)
                         
                         Text("135.47")
                             .foregroundColor(.black)
@@ -815,9 +851,9 @@ struct PaymentInfo : View{
                             .fontWeight(.semibold)
                         
                         Divider()
-                                              .frame(width: 60, height: 2)
-                                              .background(Color.black)
-                                              .cornerRadius(2)
+                            .frame(width: 60, height: 2)
+                            .background(Color.black)
+                            .cornerRadius(2)
                         
                     }
                     
@@ -834,18 +870,18 @@ struct PaymentInfo : View{
                     .stroke(Color.white,lineWidth: 0.0)
                     .shadow(color: .white, radius: 0.5)
             )
-                .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
+            .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
             
             
             HStack{
-                                               Text("Card Details")
-                                                   .foregroundColor(Color.gray)
-                                                   .font(.custom("Menlo Regular",size: 17.5))
-                                                   .fontWeight(.thin)
-                                               
-                                               
-                                               Spacer()
-                                           }.padding(EdgeInsets(top: 0, leading: 25, bottom: 7, trailing: 0))
+                Text("Card Details")
+                    .foregroundColor(Color.gray)
+                    .font(.custom("Menlo Regular",size: 17.5))
+                    .fontWeight(.thin)
+                
+                
+                Spacer()
+            }.padding(EdgeInsets(top: 0, leading: 25, bottom: 7, trailing: 0))
             
             
             
@@ -865,9 +901,9 @@ struct PaymentInfo : View{
                     .stroke(Color.black,lineWidth: 0.5)
                     .shadow(color: .white, radius: 0.5)
             )
-                .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
+            .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
             
-           
+            
             
             HStack{
                 
@@ -883,14 +919,14 @@ struct PaymentInfo : View{
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     
                     
-                   
+                    
                 }
                 .overlay(
                     RoundedRectangle(cornerRadius: 15.0)
                         .stroke(Color.black,lineWidth: 0.5)
                         .shadow(color: .white, radius: 0.5)
                 )
-                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 10))
+                .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 10))
                 
                 HStack{
                     
@@ -903,14 +939,14 @@ struct PaymentInfo : View{
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50, alignment: .center)
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     
-                 Spacer()
+                    Spacer()
                 }
                 .overlay(
                     RoundedRectangle(cornerRadius: 15.0)
                         .stroke(Color.black,lineWidth: 0.5)
                         .shadow(color: .white, radius: 0.5)
                 )
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 10))
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 10))
                 
                 HStack{
                     
@@ -923,7 +959,7 @@ struct PaymentInfo : View{
                         .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
                         .fixedSize(horizontal: true, vertical: false)
                     
-                  
+                    
                     
                 }
                 .overlay(
@@ -931,7 +967,7 @@ struct PaymentInfo : View{
                         .stroke(Color.black,lineWidth: 0.5)
                         .shadow(color: .white, radius: 0.5)
                 )
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 20))
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 20))
             }
         }
     }
